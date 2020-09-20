@@ -1,1 +1,0 @@
-["sbt.Task[scala.collection.Seq[scala.Tuple2[java.nio.file.Path, sbt.nio.FileStamp]]]",{"hashes":[["/Users/jsewell/scala/iotMicroservices/IotKafkaDoorSensors/build.sbt","49be205ba7b02440a96dba9e5f5fa18480e37dac"],["/Users/jsewell/scala/iotMicroservices/IotKafkaDoorSensors/project/plugins.sbt","0365c1cbf767018e5a5105c7fe789a24c4a7ca2e"]],"lastModifiedTimes":[]}]
