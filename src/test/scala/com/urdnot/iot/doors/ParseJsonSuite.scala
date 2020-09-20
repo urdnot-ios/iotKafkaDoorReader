@@ -4,9 +4,9 @@ import org.scalatest.flatspec.AsyncFlatSpec
 import DataProcessor._
 
 class ParseJsonSuite extends AsyncFlatSpec with DataStructures {
-  val validJsonDoor: Array[Byte] = """{"status": "open", "timestamp": 1600626499001, "door": "garage jeffrey"}""".getBytes
-  val validJsonReply: DoorStatus = DoorStatus(status = Some("open"), timestamp = Some(1600626499001L), door = Some("garage jeffrey"))
-  val validInfluxReply: String = """DoorStatus,status=open door="garage jeffrey" 1600626499001"""
+  val validJsonDoor: Array[Byte] = """{"status": "open", "timestamp": 1600626499001, "door": "garage-jeffrey"}""".getBytes
+  val validJsonReply: DoorStatus = DoorStatus(status = Some("open"), timestamp = Some(1600626499001L), door = Some("garage-jeffrey"))
+  val validInfluxReply: String = """DoorStatus,door=garage-jeffrey status="open" 1600626499001"""
 
   behavior of "DataParser"
   it should "Correctly extract an object from the JSON " in {

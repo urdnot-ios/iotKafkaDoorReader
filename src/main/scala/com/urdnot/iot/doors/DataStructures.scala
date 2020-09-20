@@ -17,12 +17,12 @@ trait DataStructures  {
     def toInfluxString(timestamp: Long): Option[String] = {
 
       val measurement = s"""${DoorStatus.this.getClass.getSimpleName},"""
-      val tags: String = DoorStatus.this.status match {
-            case Some(i) => "status=" + i
-            case None => ""
-          }
-      val fields: String = DoorStatus.this.door match {
-            case Some(i) => "door=\"" + i + "\""
+      val tags: String = DoorStatus.this.door match {
+        case Some(i) => "door=" + i
+        case None => ""
+      }
+      val fields: String = DoorStatus.this.status match {
+            case Some(i) => "status=\"" + i + "\""
             case None => ""
           }
       val timestamp: String = DoorStatus.this.timestamp.get.toString
