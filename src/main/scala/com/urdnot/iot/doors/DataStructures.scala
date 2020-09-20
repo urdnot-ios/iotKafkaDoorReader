@@ -1,6 +1,12 @@
 package com.urdnot.iot.doors
 
 trait DataStructures  {
+  // ns:
+  // 1600639700745000000
+  // ms:
+  // 1600639700745
+  // sec:
+  // 1600639700
   val msZeros: String = "000"
   val nsZeros: String = "000000000"
   final case class DoorStatus(
@@ -19,7 +25,7 @@ trait DataStructures  {
             case Some(i) => "door=\"" + i + "\""
             case None => ""
           }
-      val timestamp: String = DoorStatus.this.timestamp.get.toString + msZeros
+      val timestamp: String = DoorStatus.this.timestamp.get.toString
       Some(measurement + tags + " " + fields + " " + timestamp)
     }
   }

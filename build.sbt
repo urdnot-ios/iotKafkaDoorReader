@@ -9,7 +9,7 @@ name := "IotKafkaDoorSensors"
 // Docker image name:
 packageName := s"${name.value.toLowerCase}"
 
-version := "2.0.1"
+version := "2.1.1"
 
 val scalaMajorVersion = "2.13"
 val scalaMinorVersion = "2"
